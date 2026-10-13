@@ -30,7 +30,7 @@ PyTorch 학습 → ONNX 변환 → TensorRT FP16 엔진 → C++ 추론 DLL(`exte
 flowchart TB
   subgraph Offline["오프라인 · 학습 (Python)"]
     direction LR
-    A[MVTec AD<br/>층화 분할] --> B[CLAHE + 1ch 정규화]
+    A[MVTec AD<br/>층화 분할] --> B[CLAHE<br/>1ch 정규화]
     B --> C[U-Net / ResNet34<br/>CE+Dice+Focal]
     C --> D[ONNX<br/>동적 배치]
     D --> E[TensorRT FP16<br/>엔진 빌드]
