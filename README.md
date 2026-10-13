@@ -202,6 +202,8 @@ cpp\build\Release\seg_bench.exe --engine runs\carpet\model_fp16.engine `
 - 유일한 오판 1건은 정상 이미지를 thread(OK 결함)로 판정한 경우로, NG 방향의 미검출은 없음. 오검출 위치는 이미지 가장자리(위 그림 마지막 행)로, 경계 처리 개선이 다음 과제
 - PyTorch → ONNX → TensorRT FP16 → C++ DLL 전 구간에서 이미지 판정이 한 번도 바뀌지 않음
 
+![test셋 예측 예시: 원본, 정답, 예측, 확대](docs/results.png)
+
 ## 트러블슈팅: 작은 배치에서 학습이 무너진 문제
 
 | | 1차 학습 | 수정 후 |
