@@ -1,0 +1,26 @@
+{
+  "images": 16,
+  "image_accuracy_vs_gt": 0.9375,
+  "ng_recall_vs_gt": 1.0,
+  "ng_missed": 0,
+  "confusion_matrix(row=GT,col=Pred)": [
+    [
+      7,
+      0,
+      1
+    ],
+    [
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      4
+    ]
+  ],
+  "dll_ms_per_chunk_mean": 27.22,
+  "pixel_agreement_vs_onnx": 0.999995,
+  "decision_match_vs_onnx": "16/16"
+}

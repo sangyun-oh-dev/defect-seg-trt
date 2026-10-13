@@ -182,7 +182,7 @@ cpp\build\Release\seg_bench.exe --engine runs\carpet\model_fp16.engine `
 
 ## 결과
 
-모든 값은 test셋(학습·검증에 쓰지 않은 16장: 정상 8, metal 4, thread 4) 기준입니다.
+모든 값은 test셋(학습·검증에 쓰지 않은 16장: 정상 8, metal 4, thread 4) 기준입니다. 표의 출처 파일은 [`results/`](results/) 폴더에 그대로 올려 두었습니다 (1차 학습 기록 `history_bs2_before.json` 포함).
 
 **환경**: RTX 3050 4GB Laptop GPU (sm_86) / CUDA 12.8 / TensorRT 10.16.1 / Driver 617.42 / Windows, VS 2022
 

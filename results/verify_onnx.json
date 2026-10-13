@@ -1,0 +1,10 @@
+{
+  "images": 16,
+  "logit_max_abs_diff": 7.6e-05,
+  "pixel_argmax_agreement": 1.0,
+  "image_decision_match": "16/16",
+  "ort_provider": "CPUExecutionProvider",
+  "ort_chunk_size": 4,
+  "ort_ms_per_chunk_mean": 864.66,
+  "ort_ms_per_chunk_p99": 991.4
+}

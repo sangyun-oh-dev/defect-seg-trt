@@ -1,0 +1,691 @@
+[
+ {
+  "epoch": 1,
+  "loss": 2.1825,
+  "ce": 1.1703,
+  "dice": 0.9881,
+  "focal": 0.0241,
+  "sec": 18.5
+ },
+ {
+  "epoch": 2,
+  "loss": 1.9526,
+  "ce": 0.9535,
+  "dice": 0.983,
+  "focal": 0.0162,
+  "sec": 12.0
+ },
+ {
+  "epoch": 3,
+  "loss": 1.6802,
+  "ce": 0.6977,
+  "dice": 0.9724,
+  "focal": 0.0101,
+  "sec": 12.2
+ },
+ {
+  "epoch": 4,
+  "loss": 1.4424,
+  "ce": 0.4759,
+  "dice": 0.9606,
+  "focal": 0.0058,
+  "sec": 12.9
+ },
+ {
+  "epoch": 5,
+  "loss": 1.4127,
+  "ce": 0.4499,
+  "dice": 0.9543,
+  "focal": 0.0085,
+  "sec": 14.5,
+  "val_mIoU_defect": 0.1234,
+  "val_macro_f1": 0.1111,
+  "val_ng_recall": 1.0,
+  "saved": true
+ },
+ {
+  "epoch": 6,
+  "loss": 1.4083,
+  "ce": 0.4495,
+  "dice": 0.9476,
+  "focal": 0.0111,
+  "sec": 15.4
+ },
+ {
+  "epoch": 7,
+  "loss": 1.2158,
+  "ce": 0.3038,
+  "dice": 0.9061,
+  "focal": 0.0058,
+  "sec": 15.9
+ },
+ {
+  "epoch": 8,
+  "loss": 1.342,
+  "ce": 0.4123,
+  "dice": 0.9177,
+  "focal": 0.012,
+  "sec": 15.4
+ },
+ {
+  "epoch": 9,
+  "loss": NaN,
+  "ce": NaN,
+  "dice": NaN,
+  "focal": NaN,
+  "sec": 17.3
+ },
+ {
+  "epoch": 10,
+  "loss": 1.2333,
+  "ce": 0.3414,
+  "dice": 0.8849,
+  "focal": 0.0069,
+  "sec": 16.2,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 11,
+  "loss": 1.2077,
+  "ce": 0.3319,
+  "dice": 0.868,
+  "focal": 0.0078,
+  "sec": 16.8
+ },
+ {
+  "epoch": 12,
+  "loss": 1.143,
+  "ce": 0.2921,
+  "dice": 0.8437,
+  "focal": 0.0072,
+  "sec": 17.3
+ },
+ {
+  "epoch": 13,
+  "loss": NaN,
+  "ce": NaN,
+  "dice": NaN,
+  "focal": NaN,
+  "sec": 17.3
+ },
+ {
+  "epoch": 14,
+  "loss": 1.0467,
+  "ce": 0.2207,
+  "dice": 0.8196,
+  "focal": 0.0064,
+  "sec": 16.9
+ },
+ {
+  "epoch": 15,
+  "loss": 0.9885,
+  "ce": 0.1822,
+  "dice": 0.8005,
+  "focal": 0.0058,
+  "sec": 17.6,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 16,
+  "loss": 0.9038,
+  "ce": 0.1227,
+  "dice": 0.7772,
+  "focal": 0.004,
+  "sec": 18.0
+ },
+ {
+  "epoch": 17,
+  "loss": NaN,
+  "ce": NaN,
+  "dice": NaN,
+  "focal": NaN,
+  "sec": 17.5
+ },
+ {
+  "epoch": 18,
+  "loss": 0.8838,
+  "ce": 0.1136,
+  "dice": 0.766,
+  "focal": 0.0042,
+  "sec": 17.5
+ },
+ {
+  "epoch": 19,
+  "loss": 0.8415,
+  "ce": 0.1063,
+  "dice": 0.7313,
+  "focal": 0.0039,
+  "sec": 17.5
+ },
+ {
+  "epoch": 20,
+  "loss": 0.8694,
+  "ce": 0.1205,
+  "dice": 0.7444,
+  "focal": 0.0046,
+  "sec": 17.4,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 21,
+  "loss": 0.7887,
+  "ce": 0.0547,
+  "dice": 0.7319,
+  "focal": 0.0021,
+  "sec": 17.4
+ },
+ {
+  "epoch": 22,
+  "loss": 0.9435,
+  "ce": 0.1864,
+  "dice": 0.7485,
+  "focal": 0.0086,
+  "sec": 17.4
+ },
+ {
+  "epoch": 23,
+  "loss": 0.843,
+  "ce": 0.0844,
+  "dice": 0.7562,
+  "focal": 0.0024,
+  "sec": 17.5
+ },
+ {
+  "epoch": 24,
+  "loss": 0.7978,
+  "ce": 0.0834,
+  "dice": 0.7114,
+  "focal": 0.0029,
+  "sec": 17.5
+ },
+ {
+  "epoch": 25,
+  "loss": 0.7698,
+  "ce": 0.0668,
+  "dice": 0.7007,
+  "focal": 0.0023,
+  "sec": 17.4,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 26,
+  "loss": 0.8091,
+  "ce": 0.0755,
+  "dice": 0.73,
+  "focal": 0.0036,
+  "sec": 17.5
+ },
+ {
+  "epoch": 27,
+  "loss": 0.8059,
+  "ce": 0.0783,
+  "dice": 0.7252,
+  "focal": 0.0024,
+  "sec": 17.7
+ },
+ {
+  "epoch": 28,
+  "loss": 0.7773,
+  "ce": 0.0592,
+  "dice": 0.7161,
+  "focal": 0.002,
+  "sec": 25.8
+ },
+ {
+  "epoch": 29,
+  "loss": 0.7338,
+  "ce": 0.0437,
+  "dice": 0.6884,
+  "focal": 0.0016,
+  "sec": 39.1
+ },
+ {
+  "epoch": 30,
+  "loss": 0.7961,
+  "ce": 0.1039,
+  "dice": 0.6883,
+  "focal": 0.0038,
+  "sec": 38.2,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 31,
+  "loss": 0.7236,
+  "ce": 0.0508,
+  "dice": 0.671,
+  "focal": 0.0017,
+  "sec": 37.8
+ },
+ {
+  "epoch": 32,
+  "loss": 0.7946,
+  "ce": 0.0839,
+  "dice": 0.7073,
+  "focal": 0.0034,
+  "sec": 37.7
+ },
+ {
+  "epoch": 33,
+  "loss": 0.7575,
+  "ce": 0.0629,
+  "dice": 0.6921,
+  "focal": 0.0026,
+  "sec": 37.9
+ },
+ {
+  "epoch": 34,
+  "loss": 0.9387,
+  "ce": 0.1779,
+  "dice": 0.7542,
+  "focal": 0.0066,
+  "sec": 37.3
+ },
+ {
+  "epoch": 35,
+  "loss": 0.7931,
+  "ce": 0.0856,
+  "dice": 0.7041,
+  "focal": 0.0033,
+  "sec": 37.4,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 36,
+  "loss": 0.7566,
+  "ce": 0.0504,
+  "dice": 0.7044,
+  "focal": 0.0018,
+  "sec": 37.2
+ },
+ {
+  "epoch": 37,
+  "loss": 0.7958,
+  "ce": 0.091,
+  "dice": 0.7008,
+  "focal": 0.004,
+  "sec": 37.1
+ },
+ {
+  "epoch": 38,
+  "loss": 0.771,
+  "ce": 0.0643,
+  "dice": 0.7041,
+  "focal": 0.0025,
+  "sec": 36.9
+ },
+ {
+  "epoch": 39,
+  "loss": 0.7301,
+  "ce": 0.0315,
+  "dice": 0.6975,
+  "focal": 0.001,
+  "sec": 37.3
+ },
+ {
+  "epoch": 40,
+  "loss": 0.7242,
+  "ce": 0.0377,
+  "dice": 0.685,
+  "focal": 0.0015,
+  "sec": 38.1,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 41,
+  "loss": 0.7524,
+  "ce": 0.0548,
+  "dice": 0.6958,
+  "focal": 0.0018,
+  "sec": 37.7
+ },
+ {
+  "epoch": 42,
+  "loss": 0.7202,
+  "ce": 0.0364,
+  "dice": 0.6826,
+  "focal": 0.0012,
+  "sec": 37.4
+ },
+ {
+  "epoch": 43,
+  "loss": 0.6422,
+  "ce": 0.0357,
+  "dice": 0.6053,
+  "focal": 0.0012,
+  "sec": 37.0
+ },
+ {
+  "epoch": 44,
+  "loss": 0.9638,
+  "ce": 0.2318,
+  "dice": 0.7224,
+  "focal": 0.0095,
+  "sec": 37.6
+ },
+ {
+  "epoch": 45,
+  "loss": 0.773,
+  "ce": 0.0928,
+  "dice": 0.6766,
+  "focal": 0.0035,
+  "sec": 37.8,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 46,
+  "loss": 0.7161,
+  "ce": 0.1351,
+  "dice": 0.5745,
+  "focal": 0.0065,
+  "sec": 37.5
+ },
+ {
+  "epoch": 47,
+  "loss": 0.7719,
+  "ce": 0.2909,
+  "dice": 0.4668,
+  "focal": 0.0143,
+  "sec": 37.6
+ },
+ {
+  "epoch": 48,
+  "loss": 0.865,
+  "ce": 0.1703,
+  "dice": 0.6878,
+  "focal": 0.007,
+  "sec": 37.0
+ },
+ {
+  "epoch": 49,
+  "loss": 0.6395,
+  "ce": 0.0773,
+  "dice": 0.5591,
+  "focal": 0.0032,
+  "sec": 36.5
+ },
+ {
+  "epoch": 50,
+  "loss": 0.4951,
+  "ce": 0.0754,
+  "dice": 0.4161,
+  "focal": 0.0036,
+  "sec": 36.1,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 51,
+  "loss": 0.6165,
+  "ce": 0.1549,
+  "dice": 0.4554,
+  "focal": 0.0061,
+  "sec": 36.0
+ },
+ {
+  "epoch": 52,
+  "loss": 0.4972,
+  "ce": 0.0728,
+  "dice": 0.4214,
+  "focal": 0.0031,
+  "sec": 36.5
+ },
+ {
+  "epoch": 53,
+  "loss": 0.4525,
+  "ce": 0.0632,
+  "dice": 0.3868,
+  "focal": 0.0025,
+  "sec": 37.7
+ },
+ {
+  "epoch": 54,
+  "loss": 0.4821,
+  "ce": 0.0832,
+  "dice": 0.3952,
+  "focal": 0.0037,
+  "sec": 37.6
+ },
+ {
+  "epoch": 55,
+  "loss": 0.4752,
+  "ce": 0.0666,
+  "dice": 0.4053,
+  "focal": 0.0033,
+  "sec": 37.2,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 56,
+  "loss": 0.4338,
+  "ce": 0.0455,
+  "dice": 0.3863,
+  "focal": 0.0019,
+  "sec": 37.1
+ },
+ {
+  "epoch": 57,
+  "loss": 0.4026,
+  "ce": 0.0404,
+  "dice": 0.3604,
+  "focal": 0.0019,
+  "sec": 36.8
+ },
+ {
+  "epoch": 58,
+  "loss": 0.392,
+  "ce": 0.0341,
+  "dice": 0.3565,
+  "focal": 0.0014,
+  "sec": 36.6
+ },
+ {
+  "epoch": 59,
+  "loss": 0.4195,
+  "ce": 0.0497,
+  "dice": 0.3677,
+  "focal": 0.002,
+  "sec": 36.9
+ },
+ {
+  "epoch": 60,
+  "loss": 0.4007,
+  "ce": 0.0423,
+  "dice": 0.3566,
+  "focal": 0.0018,
+  "sec": 37.0,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 61,
+  "loss": 0.3941,
+  "ce": 0.0327,
+  "dice": 0.3601,
+  "focal": 0.0012,
+  "sec": 36.8
+ },
+ {
+  "epoch": 62,
+  "loss": 0.3879,
+  "ce": 0.0437,
+  "dice": 0.3424,
+  "focal": 0.0018,
+  "sec": 36.8
+ },
+ {
+  "epoch": 63,
+  "loss": 0.3633,
+  "ce": 0.0551,
+  "dice": 0.3059,
+  "focal": 0.0022,
+  "sec": 37.6
+ },
+ {
+  "epoch": 64,
+  "loss": 0.3332,
+  "ce": 0.0599,
+  "dice": 0.2709,
+  "focal": 0.0024,
+  "sec": 38.1
+ },
+ {
+  "epoch": 65,
+  "loss": 0.2885,
+  "ce": 0.0646,
+  "dice": 0.2216,
+  "focal": 0.0024,
+  "sec": 37.2,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 66,
+  "loss": 0.2689,
+  "ce": 0.0582,
+  "dice": 0.2084,
+  "focal": 0.0022,
+  "sec": 37.5
+ },
+ {
+  "epoch": 67,
+  "loss": 0.2556,
+  "ce": 0.0738,
+  "dice": 0.1783,
+  "focal": 0.0035,
+  "sec": 37.7
+ },
+ {
+  "epoch": 68,
+  "loss": 0.2172,
+  "ce": 0.0561,
+  "dice": 0.1592,
+  "focal": 0.002,
+  "sec": 37.3
+ },
+ {
+  "epoch": 69,
+  "loss": 0.2129,
+  "ce": 0.0621,
+  "dice": 0.1477,
+  "focal": 0.0031,
+  "sec": 37.1
+ },
+ {
+  "epoch": 70,
+  "loss": 0.1916,
+  "ce": 0.064,
+  "dice": 0.125,
+  "focal": 0.0026,
+  "sec": 36.8,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 71,
+  "loss": 0.2117,
+  "ce": 0.0779,
+  "dice": 0.1314,
+  "focal": 0.0024,
+  "sec": 37.2
+ },
+ {
+  "epoch": 72,
+  "loss": 0.1753,
+  "ce": 0.0535,
+  "dice": 0.1198,
+  "focal": 0.002,
+  "sec": 37.6
+ },
+ {
+  "epoch": 73,
+  "loss": 0.1557,
+  "ce": 0.0527,
+  "dice": 0.1011,
+  "focal": 0.0019,
+  "sec": 37.2
+ },
+ {
+  "epoch": 74,
+  "loss": 0.1702,
+  "ce": 0.0597,
+  "dice": 0.108,
+  "focal": 0.0024,
+  "sec": 37.2
+ },
+ {
+  "epoch": 75,
+  "loss": 0.2358,
+  "ce": 0.0972,
+  "dice": 0.1357,
+  "focal": 0.0029,
+  "sec": 37.2,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ },
+ {
+  "epoch": 76,
+  "loss": 0.1977,
+  "ce": 0.0688,
+  "dice": 0.1262,
+  "focal": 0.0028,
+  "sec": 37.2
+ },
+ {
+  "epoch": 77,
+  "loss": 0.1541,
+  "ce": 0.0407,
+  "dice": 0.1118,
+  "focal": 0.0015,
+  "sec": 37.2
+ },
+ {
+  "epoch": 78,
+  "loss": 0.1618,
+  "ce": 0.0465,
+  "dice": 0.1135,
+  "focal": 0.0018,
+  "sec": 37.2
+ },
+ {
+  "epoch": 79,
+  "loss": 0.1558,
+  "ce": 0.0362,
+  "dice": 0.1183,
+  "focal": 0.0013,
+  "sec": 37.0
+ },
+ {
+  "epoch": 80,
+  "loss": 0.1875,
+  "ce": 0.066,
+  "dice": 0.1192,
+  "focal": 0.0024,
+  "sec": 36.9,
+  "val_mIoU_defect": 0.0,
+  "val_macro_f1": 0.2319,
+  "val_ng_recall": 0.0
+ }
+]

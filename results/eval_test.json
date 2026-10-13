@@ -1,0 +1,55 @@
+{
+  "pixel": {
+    "iou": {
+      "background": 0.999,
+      "metal_contamination": 0.7349,
+      "thread": 0.5882
+    },
+    "dice": {
+      "background": 0.9995,
+      "metal_contamination": 0.8472,
+      "thread": 0.7407
+    },
+    "mIoU_defect": 0.6615
+  },
+  "image": {
+    "accuracy": 0.9375,
+    "precision": {
+      "background": 1.0,
+      "metal_contamination": 1.0,
+      "thread": 0.8
+    },
+    "recall": {
+      "background": 0.875,
+      "metal_contamination": 1.0,
+      "thread": 1.0
+    },
+    "f1": {
+      "background": 0.9333,
+      "metal_contamination": 1.0,
+      "thread": 0.8889
+    },
+    "macro_f1": 0.9407,
+    "ng_recall": 1.0,
+    "ng_missed": 0,
+    "confusion_matrix(row=GT,col=Pred)": [
+      [
+        7,
+        0,
+        1
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "split": "test",
+  "num_images": 16
+}

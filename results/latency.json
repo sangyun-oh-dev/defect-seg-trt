@@ -1,0 +1,11 @@
+{
+  "version": "seg_infer 1.0 (TensorRT 10.16.1)",
+  "images": 16,
+  "patches_per_chunk": 4,
+  "patch_size": 512,
+  "iters": 500,
+  "ms_per_chunk_mean": 22.0252,
+  "ms_per_chunk_p50": 22.0329,
+  "ms_per_chunk_p99": 22.4379,
+  "ms_per_patch_mean": 5.50631
+}

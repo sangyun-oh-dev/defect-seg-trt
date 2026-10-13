@@ -1,0 +1,17 @@
+image,pred_class,area_0,area_1,area_2,ms
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\173.png",0,1048576,0,0,24.4682
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\038.png",0,1048576,0,0,22.1127
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\010.png",0,1048576,0,0,22.1971
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\236.png",0,1048576,0,0,22.3203
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\good\019.png",2,1046482,0,2094,22.1659
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\115.png",0,1048576,0,0,22.1737
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\074.png",0,1048576,0,0,22.2345
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\train\good\032.png",0,1048576,0,0,21.945
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\metal_contamination\004.png",1,1042841,5735,0,21.498
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\metal_contamination\009.png",1,1042314,6089,173,21.461
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\metal_contamination\016.png",1,1045005,3216,355,21.4816
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\metal_contamination\011.png",1,1044874,3702,0,21.3706
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\thread\009.png",2,1045761,0,2815,21.5735
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\thread\007.png",2,1036278,0,12298,21.4102
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\thread\001.png",2,1044006,0,4570,21.3449
+"C:\projects\defect-seg-trt\data\mvtec_ad\carpet\test\thread\002.png",2,1042667,0,5909,21.4925
