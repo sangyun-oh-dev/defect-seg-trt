@@ -199,7 +199,7 @@ cpp\build\Release\seg_bench.exe --engine runs\carpet\model_fp16.engine `
 | 안정성 | 벤치마크 500회 반복 중 오류 | 0 | `seg_bench` 출력 |
 
 - 1 chunk = 1024×1024 이미지의 512×512 patch 4장. DLL 시간은 H2D·정규화·추론·argmax·D2H를 모두 포함 (이미지 읽기·CLAHE 제외)
-- 유일한 오판 1건은 정상 이미지를 thread(OK 결함)로 판정한 경우로, NG 방향의 미검출은 없음
+- 유일한 오판 1건은 정상 이미지를 thread(OK 결함)로 판정한 경우로, NG 방향의 미검출은 없음. 오검출 위치는 이미지 가장자리(위 그림 마지막 행)로, 경계 처리 개선이 다음 과제
 - PyTorch → ONNX → TensorRT FP16 → C++ DLL 전 구간에서 이미지 판정이 한 번도 바뀌지 않음
 
 ## 트러블슈팅: 작은 배치에서 학습이 무너진 문제
