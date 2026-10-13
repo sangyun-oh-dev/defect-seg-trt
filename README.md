@@ -27,14 +27,16 @@ PyTorch 학습 → ONNX 변환 → TensorRT FP16 엔진 → C++ 추론 DLL(`exte
 ## 시스템 구성
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph Offline["오프라인 · 학습 (Python)"]
+    direction LR
     A[MVTec AD<br/>층화 분할] --> B[CLAHE + 1ch 정규화]
     B --> C[U-Net / ResNet34<br/>CE+Dice+Focal]
     C --> D[ONNX<br/>동적 배치]
     D --> E[TensorRT FP16<br/>엔진 빌드]
   end
   subgraph Online["온라인 · 검사기 (C++)"]
+    direction LR
     F[원본 영상] --> G[Gray + CLAHE<br/>512 patch 타일링]
     G --> H["seg_infer.dll<br/>extern C API"]
     H --> I[이미지 단위 판정<br/>OK / NG]
