@@ -1,0 +1,52 @@
+# MVTec AD carpet: 표면 위 '이물'을 두 종류로 구분하는 문제로 재구성
+#  - 실제 업무: Lami Tape 내부 이물(NG) vs 외부 이물(OK)
+#  - 재현:      metal_contamination(금속 이물, NG) vs thread(실 이물, OK)
+data:
+  root: data/mvtec_ad
+  category: carpet
+  # 결함 폴더명 -> 클래스 ID (0 = 정상 배경)
+  class_map:
+    metal_contamination: 1
+    thread: 2
+  class_names: [background, metal_contamination, thread]
+  include_good: true        # 정상 이미지를 negative 샘플로 함께 사용
+  split: [0.6, 0.2, 0.2]    # train / val / test (결함 유형별 층화 분할)
+  seed: 42
+
+preprocess:
+  grayscale: true
+  clahe_clip: 2.0
+  clahe_grid: 8
+  mean: 0.449               # ImageNet RGB 평균의 gray 근사
+  std: 0.226
+
+model:
+  arch: unet
+  encoder: resnet34
+  encoder_weights: imagenet # 1ch 입력 시 smp가 첫 conv 가중치를 채널 합산으로 변환
+  in_channels: 1
+  num_classes: 3
+  decoder_norm: none        # 작은 배치에서 BN 통계 불안정 문제 회피 (인코더 BN은 학습 중 고정)
+
+train:
+  patch_size: 512
+  defect_crop_prob: 0.8     # 결함이 포함되도록 crop할 확률 (희소 클래스 대응)
+  batch_size: 8
+  accum_steps: 1            # GPU 메모리가 부족하면 --batch-size 2 --accum 4 처럼 유효 배치 유지
+  epochs: 80
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  num_workers: 4
+  amp: true
+  loss:
+    ce_weight: 1.0
+    dice_weight: 1.0
+    focal_weight: 1.0
+    focal_gamma: 2.0
+    class_weights: auto     # auto = sqrt(배경빈도/클래스빈도), 배경 1, 최대 10
+
+decision:
+  ng_class: 1               # 이 클래스가 검출되면 NG
+  min_area: 30              # 픽셀 수 미만이면 노이즈로 간주
+
+output_dir: runs/carpet

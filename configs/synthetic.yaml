@@ -1,0 +1,52 @@
+# 연습용 설정: 합성 데이터 (인터넷·외부 데이터 불필요)
+#   python tests/make_synthetic_mvtec.py --root data/synthetic --size 1024
+#   클래스 구성은 carpet.yaml과 동일 (1 = metal_contamination, 2 = thread)
+data:
+  root: data/synthetic
+  category: carpet
+  # 결함 폴더명 -> 클래스 ID (0 = 정상 배경)
+  class_map:
+    metal_contamination: 1
+    thread: 2
+  class_names: [background, metal_contamination, thread]
+  include_good: true        # 정상 이미지를 negative 샘플로 함께 사용
+  split: [0.6, 0.2, 0.2]    # train / val / test (결함 유형별 층화 분할)
+  seed: 42
+
+preprocess:
+  grayscale: true
+  clahe_clip: 2.0
+  clahe_grid: 8
+  mean: 0.449               # ImageNet RGB 평균의 gray 근사
+  std: 0.226
+
+model:
+  arch: unet
+  encoder: resnet34
+  encoder_weights: null      # 오프라인 연습용: 사전학습 가중치 다운로드 없음
+  in_channels: 1
+  num_classes: 3
+  decoder_norm: none
+
+train:
+  patch_size: 512
+  defect_crop_prob: 0.8     # 결함이 포함되도록 crop할 확률 (희소 클래스 대응)
+  batch_size: 8
+  accum_steps: 1
+  epochs: 80
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  num_workers: 4
+  amp: true
+  loss:
+    ce_weight: 1.0
+    dice_weight: 1.0
+    focal_weight: 1.0
+    focal_gamma: 2.0
+    class_weights: auto     # auto = 학습셋 픽셀 빈도 역수 기반 (median frequency)
+
+decision:
+  ng_class: 1               # 이 클래스가 검출되면 NG
+  min_area: 30              # 픽셀 수 미만이면 노이즈로 간주
+
+output_dir: runs/synthetic

@@ -1,0 +1,14 @@
+﻿.venv/
+venv/
+__pycache__/
+*.pyc
+data/
+runs/
+*.pth
+*.onnx
+*.engine
+*.plan
+cpp/build/
+.vscode/
+.idea/
+

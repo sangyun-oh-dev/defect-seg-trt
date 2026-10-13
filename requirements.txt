@@ -1,0 +1,9 @@
+torch>=2.1
+torchvision>=0.16
+segmentation-models-pytorch>=0.3.3
+opencv-python>=4.8
+numpy>=1.24
+pyyaml>=6.0
+onnx>=1.15
+onnxruntime-gpu>=1.17   # GPU가 없으면 onnxruntime 으로 대체
+tqdm>=4.66
