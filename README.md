@@ -41,7 +41,7 @@ flowchart TB
     G --> H["seg_infer.dll<br/>extern C API"]
     H --> I[이미지 단위 판정<br/>OK / NG]
   end
-  E -. 엔진 배포 .-> H
+  Offline -. 엔진 배포 .-> Online
 ```
 
 DLL 내부 처리 (한 번의 `seg_infer` 호출 = 이미지 1장의 patch 묶음 1 chunk):
