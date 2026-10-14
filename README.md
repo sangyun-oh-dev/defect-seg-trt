@@ -1,4 +1,4 @@
-﻿# defect-seg-trt
+# defect-seg-trt
 
 **산업용 결함 Segmentation 모델을 비전 검사기에 붙이는 전 과정 재현**
 
@@ -179,6 +179,29 @@ cpp\build\Release\seg_bench.exe --engine runs\carpet\model_fp16.engine `
 ```
 
 결과: `runs/carpet/bench/latency.json`, `predictions.csv`
+
+## Docker로 실행 (선택)
+
+CUDA·TensorRT·OpenCV·Visual Studio를 설치하지 않고, NVIDIA GPU와 드라이버만으로 전체 파이프라인을 재현합니다.
+NVIDIA NGC TensorRT 컨테이너(24.08: CUDA 12.6, TensorRT 10.3) 위에서 동작하며, C++ 추론 라이브러리는 Linux용(`libseg_infer.so`)으로 빌드됩니다.
+
+**준비물**: NVIDIA GPU, CUDA 12.6 이상을 지원하는 드라이버, Docker + NVIDIA Container Toolkit
+(Windows는 Docker Desktop의 WSL2 백엔드에서 GPU 사용), `data/mvtec_ad/carpet` 데이터
+
+```bash
+docker build -f docker/Dockerfile -t defect-seg-trt .
+
+# 전체 실행: 학습 -> 평가 -> ONNX -> TensorRT -> C++ 검증 -> 벤치마크 -> 결과 그림
+docker run --rm --gpus all --ipc=host \
+  -v "$PWD/data:/workspace/data" -v "$PWD/runs_docker:/workspace/runs" \
+  defect-seg-trt bash scripts/run_all.sh
+```
+
+- 결과는 호스트의 `runs_docker/carpet/`에 저장됩니다. Windows PowerShell에서는 `$PWD` 대신 `${PWD}`를 쓰고, 줄 끝 `\`를 지워 한 줄로 실행합니다.
+- 환경 변수로 조절: `-e BATCH=8 -e ACCUM=1`(GPU 메모리가 클 때), `-e EPOCHS=2`(빠른 동작 확인), `-e SKIP_TRAIN=1`(기존 `best.pth` 재사용)
+- 컨테이너 안에서 단계별로 실행하려면 `docker run --rm -it --gpus all --ipc=host -v ... defect-seg-trt` 후 `scripts/run_all.sh`의 명령을 하나씩 실행합니다.
+- 엔진은 컨테이너의 TensorRT 버전과 GPU에 맞춰 새로 빌드되므로, Windows에서 만든 `.engine`과 섞어 쓰지 않습니다.
+- 노트북(WSL2)에서는 GPU 클럭과 가상화 영향으로 지연시간이 Windows 실행보다 길게 측정될 수 있습니다. 아래 결과표의 속도는 Windows 기준입니다.
 
 ## 결과
 

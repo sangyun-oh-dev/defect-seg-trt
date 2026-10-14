@@ -1,0 +1,13 @@
+.git
+.venv
+venv
+data
+runs
+runs_*
+cpp/build
+**/__pycache__
+*.pth
+*.onnx
+*.engine
+docs
+results

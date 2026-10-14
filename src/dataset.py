@@ -72,7 +72,9 @@ def load_or_make_split(cfg: dict) -> dict[str, list[Sample]]:
     path = Path(cfg["output_dir"]) / "split.json"
     if path.exists():
         raw = json.loads(path.read_text(encoding="utf-8"))
-        return {k: [Sample(**s) for s in v] for k, v in raw.items()}
+        # Windows에서 만든 split.json(역슬래시 경로)을 Linux/Docker에서도 읽을 수 있게 정규화
+        fix = lambda x: x.replace("\\", "/") if isinstance(x, str) else x
+        return {k: [Sample(fix(s["image"]), fix(s["mask"]), s["label"]) for s in v] for k, v in raw.items()}
     split = stratified_split(scan_mvtec(cfg["data"]), cfg["data"]["split"], cfg["data"]["seed"])
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({k: [asdict(s) for s in v] for k, v in split.items()},

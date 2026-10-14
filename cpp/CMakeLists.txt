@@ -14,9 +14,9 @@ option(BUILD_BENCH "OpenCV 기반 벤치마크 실행 파일 빌드" ON)
 
 find_package(CUDAToolkit REQUIRED)
 
-find_path(TENSORRT_INCLUDE_DIR NvInfer.h HINTS ${TENSORRT_ROOT} PATH_SUFFIXES include)
+find_path(TENSORRT_INCLUDE_DIR NvInfer.h HINTS ${TENSORRT_ROOT} PATH_SUFFIXES include include/x86_64-linux-gnu)
 # TensorRT 10.x on Windows: nvinfer_10.lib, Linux: libnvinfer.so
-find_library(TENSORRT_NVINFER NAMES nvinfer_10 nvinfer HINTS ${TENSORRT_ROOT} PATH_SUFFIXES lib lib64)
+find_library(TENSORRT_NVINFER NAMES nvinfer_10 nvinfer HINTS ${TENSORRT_ROOT} PATH_SUFFIXES lib lib64 lib/x86_64-linux-gnu)
 if(NOT TENSORRT_INCLUDE_DIR OR NOT TENSORRT_NVINFER)
   message(FATAL_ERROR "TensorRT를 찾지 못했습니다. -DTENSORRT_ROOT=<TensorRT 폴더> 를 지정하세요.")
 endif()

@@ -1,0 +1,8 @@
+# Docker 전용 (torch는 Dockerfile에서 CUDA 빌드로 따로 설치)
+segmentation-models-pytorch>=0.3.3
+opencv-python-headless>=4.8
+numpy>=1.24
+pyyaml>=6.0
+onnx>=1.15
+onnxruntime>=1.17   # 정합성 비교용. 속도 측정은 TensorRT가 담당하므로 CPU 버전으로 충분
+tqdm>=4.66

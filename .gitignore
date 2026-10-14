@@ -12,3 +12,5 @@ cpp/build/
 .vscode/
 .idea/
 
+
+runs_*/
