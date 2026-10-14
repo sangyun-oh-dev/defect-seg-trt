@@ -9,6 +9,19 @@ PyTorch 학습 → ONNX 변환 → TensorRT FP16 엔진 → C++ 추론 DLL(`exte
 
 ---
 
+## 빠른 실행 (Docker · Linux / Windows WSL2)
+
+NVIDIA GPU와 Docker만 있으면 CUDA·TensorRT·Visual Studio 설치 없이 전체 파이프라인을 재현합니다.
+
+```bash
+git clone https://github.com/sangyun-oh-dev/defect-seg-trt.git && cd defect-seg-trt
+# MVTec AD carpet 데이터를 data/mvtec_ad/carpet 에 배치 (아래 '데이터 준비' 참고)
+docker build -f docker/Dockerfile -t defect-seg-trt .
+docker run --rm --gpus all --ipc=host -v "$PWD/data:/workspace/data" -v "$PWD/runs_docker:/workspace/runs" defect-seg-trt bash scripts/run_all.sh
+```
+
+학습 → 평가 → ONNX → TensorRT FP16 → C++ 추론 검증 → 벤치마크 → 결과 그림까지 자동으로 실행되고, 결과는 `runs_docker/carpet/`에 저장됩니다.
+빠른 동작 확인은 `-e EPOCHS=2`를 붙이세요. 옵션은 [Docker로 실행](#docker로-실행-선택), 설비 배포용 Windows DLL 빌드는 [실행 방법 (Windows)](#실행-방법-windows)을 참고하세요.
 ## 문제 정의
 
 실무 문제는 *같은 '이물'이라도 위치에 따라 판정이 달라지는* 분류였습니다 (내부 이물 = 불량, 외부 이물 = 양품).
