@@ -198,7 +198,7 @@ cpp\build\Release\seg_bench.exe --engine runs\carpet\model_fp16.engine `
 CUDA·TensorRT·OpenCV·Visual Studio를 설치하지 않고, NVIDIA GPU와 드라이버만으로 전체 파이프라인을 재현합니다.
 NVIDIA NGC TensorRT 컨테이너(24.08: CUDA 12.6, TensorRT 10.3) 위에서 동작하며, C++ 추론 라이브러리는 Linux용(`libseg_infer.so`)으로 빌드됩니다.
 
-**준비물**: NVIDIA GPU, CUDA 12.6 이상을 지원하는 드라이버, Docker + NVIDIA Container Toolkit
+**실행환경**: NVIDIA GPU, CUDA 12.6 이상을 지원하는 드라이버, Docker + NVIDIA Container Toolkit
 (Windows는 Docker Desktop의 WSL2 백엔드에서 GPU 사용), `data/mvtec_ad/carpet` 데이터
 
 ```bash
