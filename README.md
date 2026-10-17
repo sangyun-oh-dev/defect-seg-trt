@@ -93,7 +93,11 @@ src/
   evaluate.py              픽셀 IoU/Dice, 이미지 단위 혼동행렬·Precision/Recall
   export_onnx.py           ONNX 변환 (동적 배치)
   verify_onnx.py           PyTorch vs ONNX Runtime 정합성 + 속도
-scripts/build_engine.ps1   trtexec로 TensorRT FP16 엔진 빌드
+  visualize.py             test셋 예측 결과 그림 (원본 / 정답 / 예측 / 확대)
+scripts/
+  build_engine.ps1 / .sh   trtexec로 TensorRT FP16 엔진 빌드 (Windows / Linux)
+  run_all.sh               Docker 안에서 전체 파이프라인 한 번에 실행
+docker/Dockerfile          NGC TensorRT 기반 재현 환경
 cpp/
   include/seg_infer.h      DLL 공개 API (C ABI)
   src/seg_infer.cpp        엔진 로드, 버퍼 사전 할당, 직렬화, 예외 경계
